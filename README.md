@@ -1,7 +1,7 @@
 # Design
 
 ## High-level
-- The client is only responsible for displaying monitoring data & notifications. It does not handle notification logic nor average calculation.
+- The client is only responsible for displaying monitoring data & notifications. It does not handle notification logic nor average load calculation.
 - The server holds all the logic for generating notifications and average data. (that we will call monitoring data)
 
 - On the client side, the main dashboard is composed of three sections: 
@@ -27,18 +27,24 @@
 # Proposed design improvements
 
 ### Charts
+
 We could add a zoom functionality to be able to look closer at some points in time.
+
 We could select the time span of the whole chart, to let the user choose the one he's interested in.
 
-### Notifications
+### Notifications
 We could add the ability to clear the notifications that are too old or to clear them manually.
+
 When clicking on a notification, we could be able to display in the chart the period of time when the high-load notification was active.
 
-### Key figures
+### Key figures
 We might add something like 90-percentile average load so that we strip off extreme values. 
 
 ### Monitoring 
-Additionally to the web client, we might as well send e-mail & SMS or event Slack messages to people responsible for the server when a high-load notification is created.
+In addition to the web client, we might as well send e-mail, SMS or even Slack messages to people responsible for the server when a high-load notification is created.
+
 Also, we may want to consider using another NodeJS API to retrieve the load average, as the `os.loadavg` method does not work on _Windows_ properly.
 
+
+# How-to run it
 See README's in **client** & **server** directories for a bit more technical information & how to run the client & server.
