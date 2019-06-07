@@ -87,7 +87,7 @@ function Highlights({ data, notifications }) {
 
     const lastNotification = notifications[notifications.length - 1];
     const peakSubheader = maxAvgTime
-        ? distanceInWordsToNow(maxAvgTime) + 'ago'
+        ? distanceInWordsToNow(maxAvgTime) + ' ago'
         : '-';
     const statusSubheader = lastNotification
         ? `since ${distanceInWordsToNow(new Date(lastNotification.time))}`
