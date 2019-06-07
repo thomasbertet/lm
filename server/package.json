@@ -1,0 +1,31 @@
+{
+  "name": "load-monitor-server",
+  "version": "1.0.0",
+  "description": "Load monitoring app - server",
+  "main": "index.js",
+  "author": "Thomas BERTET",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "start": "WITH_INITIAL_DATA=true babel-node src/index.js",
+    "test": "jest",
+    "lint": "eslint -f codeframe --ext js src"
+  },
+  "dependencies": {
+    "date-fns": "^1.30.1",
+    "express": "^4.17.1",
+    "socket.io": "^2.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/node": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.16.0",
+    "eslint-config-prettier": "^4.3.0",
+    "eslint-plugin-prettier": "^3.1.0",
+    "jest": "^24.8.0",
+    "prettier": "^1.17.1"
+  }
+}
